@@ -1,0 +1,32 @@
+{
+  "name": "hello-world-rust-wasm-component-lib",
+  "version": "1.0.0+1.0.0",
+  "description": "🔗 JavaScript bindings for jcbhmr/hello-world-rust-wasm-component-lib",
+  "keywords": [
+    "wasm",
+    "webassembly",
+    "rust",
+    "wasi",
+    "wasm-component",
+    "component",
+    "webassembly-component"
+  ],
+  "homepage": "https://github.com/jcbhmr/hello-world-rust-wasm-component-lib.js",
+  "repository": "github:jcbhmr/hello-world-rust-wasm-component-lib.js",
+  "type": "module",
+  "exports": "./hello_world_rust_wasm_component_lib.js",
+  "files": [
+    "dist",
+    "print.js"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@bytecodealliance/preview2-shim": "^0.14.1"
+  },
+  "devDependencies": {
+    "@bytecodealliance/jco": "^0.14.1",
+    "@types/node": "^20.10.5"
+  }
+}

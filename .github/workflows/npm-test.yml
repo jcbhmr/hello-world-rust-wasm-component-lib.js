@@ -1,0 +1,31 @@
+name: npm test
+on:
+  push:
+    branches: "main"
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+      - .github/**
+      - "!.github/workflows/npm-test.yml"
+  pull_request:
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+      - .github/**
+      - "!.github/workflows/npm-test.yml"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  npm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm test
