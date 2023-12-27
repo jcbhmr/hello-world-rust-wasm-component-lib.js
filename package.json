@@ -20,6 +20,8 @@
     "print.js"
   ],
   "scripts": {
+    "build": "bash ./just build",
+    "pretest": "npm run build",
     "test": "node --test"
   },
   "dependencies": {

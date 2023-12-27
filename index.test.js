@@ -1,13 +1,13 @@
 import test from "node:test";
 import assert from "node:assert";
-import * as hello_world_rust_wasm_component_lib from "./hello_world_rust_wasm_component_lib.js";
+import * as hello_world_rust_wasm_component_lib from "./dist/hello_world_rust_wasm_component_lib.js";
 import {
   greet,
   greetMany,
   run,
   getReport,
   computeArea,
-} from "./hello_world_rust_wasm_component_lib.js";
+} from "./dist/hello_world_rust_wasm_component_lib.js";
 
 console.log(hello_world_rust_wasm_component_lib);
 
