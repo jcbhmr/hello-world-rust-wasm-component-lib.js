@@ -11,10 +11,10 @@
     "component",
     "webassembly-component"
   ],
-  "homepage": "https://github.com/jcbhmr/hello-world-rust-wasm-component-lib.js",
+  "homepage": "https://tsdocs.dev/docs/hello-world-rust-wasm-component-lib",
   "repository": "github:jcbhmr/hello-world-rust-wasm-component-lib.js",
   "type": "module",
-  "exports": "./hello_world_rust_wasm_component_lib.js",
+  "exports": "./dist/hello_world_rust_wasm_component_lib.js",
   "files": [
     "dist",
     "print.js"

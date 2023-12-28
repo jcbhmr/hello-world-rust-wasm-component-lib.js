@@ -32,7 +32,7 @@ test("computeArea() works", () => {
     computeArea({
       center: { x: 0, y: 0 },
       radius: 6,
-    })
+    }),
   );
   console.log("from JS", Math.PI * 6 * 6);
 });
