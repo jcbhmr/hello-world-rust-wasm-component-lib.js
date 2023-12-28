@@ -1,0 +1,57 @@
+<p>Check DevTools for more info</p>
+<pre id="pre"></pre>
+<script type="module">
+  const tests = [];
+  const test = (name, fn) => tests.push({ name, fn });
+  setTimeout(async () => {
+    for (const { name, fn } of tests) {
+      try {
+        await fn();
+        console.log(`%c✔ ${name}`, "color: green");
+        pre.append(`✔ ${name}\n`);
+      } catch (error) {
+        console.log(`%c✘ ${name}`, "color: red");
+        pre.append(`✘ ${name}\n`);
+        console.error(error);
+        pre.append(`${error}\n`);
+      }
+    }
+  }, 100);
+  import assert from "node:assert";
+  import * as hello_world_rust_wasm_component_lib from "./dist/hello_world_rust_wasm_component_lib.js";
+  import {
+    greet,
+    greetMany,
+    run,
+    getReport,
+    computeArea,
+  } from "./dist/hello_world_rust_wasm_component_lib.js";
+
+  console.log(hello_world_rust_wasm_component_lib);
+
+  test("greet() works", () => {
+    console.log(greet("Alan Turing"));
+  });
+
+  test("greetMany() works", () => {
+    console.log(greetMany(["Alan Turing", "Ada Lovelace"]));
+  });
+
+  test("run() works", () => {
+    run();
+  });
+
+  test("getReport() works", () => {
+    console.log(getReport());
+  });
+
+  test("computeArea() works", () => {
+    console.log(
+      computeArea({
+        center: { x: 0, y: 0 },
+        radius: 6,
+      })
+    );
+    console.log("from JS", Math.PI * 6 * 6);
+  });
+</script>

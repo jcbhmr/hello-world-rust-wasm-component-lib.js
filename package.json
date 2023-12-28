@@ -22,13 +22,16 @@
   "scripts": {
     "build": "bash ./just build",
     "pretest": "npm run build",
-    "test": "node --test"
+    "test": "node --test",
+    "pretest:browser": "npm run build",
+    "test:browser": "vite"
   },
   "dependencies": {
     "@bytecodealliance/preview2-shim": "^0.14.1"
   },
   "devDependencies": {
     "@bytecodealliance/jco": "^0.14.1",
-    "@types/node": "^20.10.5"
+    "@types/node": "^20.10.5",
+    "vite": "^5.0.10"
   }
 }
