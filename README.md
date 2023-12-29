@@ -35,7 +35,7 @@ console.log(greetMany(["Alan Turing", "Ada Lovelace"]));
 🦀 WASM is written in Rust \
 🟦 Includes TypeScript type definitions \
 📦 Published as an npm package \
-👩‍⚖️ [0BSD licensed] template
+👩‍⚖️ [0BSD licensed](./LICENSE) template
 
 ## Installation
 
@@ -128,5 +128,4 @@ the `+4.5.6` part is **just metadata**. You can't publish both `1.2.3+4.5.6` and
 [Deno]: https://deno.com/
 [jsDelivr]: https://www.jsdelivr.com/
 [esm.sh]: https://esm.sh/
-[0BSD licensed]: https://github.com/jcbhmr/hello-world-rust-wasm-component-lib.js/blob/main/LICENSE
 <!-- prettier-ignore-end -->
