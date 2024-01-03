@@ -19,4 +19,4 @@ build()(
   rm dist/hello_world_rust_wasm_component_lib.d.ts.bak
 )
 
-cd "$(dirname "${BASH_SOURCE[0]}")"; c=$1; shift; "$c" "$@"
+cd "$(dirname "${BASH_SOURCE[0]}")"; "$@"
